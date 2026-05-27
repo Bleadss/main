@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lê Hoàng Định Phi</title>
+    <style>
+       
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background-color: #050b14; 
+            overflow: hidden;
+            position: relative;
+            display: flex;
+        }
+
+       
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+            opacity: 0.6; 
+        }
+
+       
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(5,11,20,0.3) 0%, rgba(5,11,20,0.85) 100%);
+            z-index: 2;
+        }
+
+        
+        .right-panel {
+            position: relative;
+            z-index: 3;
+            width: 50%;
+            margin-left: auto; 
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.02); 
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-left: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        
+        .title {
+            color: #ffffff;
+            font-size: 2.6rem;
+            font-weight: 800;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 15px rgba(0, 168, 255, 0.6), 2px 2px 4px rgba(0,0,0,0.8);
+            text-align: center;
+        }
+
+       
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px; 
+            width: 100%;
+            max-width: 380px;
+        }
+
+        .btn {
+            display: block;
+            text-align: center;
+            padding: 16px 20px;
+            font-size: 1.15rem;
+            font-weight: bold;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 6px; 
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        
+        .btn:nth-child(odd) {
+            background: linear-gradient(135deg, #00a8ff 0%, #0056b3 100%);
+            color: #ffffff;
+            border: 2px solid #00a8ff;
+            box-shadow: 0 4px 15px rgba(0, 168, 255, 0.3);
+        }
+      
+        .btn:nth-child(odd):hover {
+            background: #ffffff;
+            color: #0056b3;
+            border-color: #ffffff; 
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.7);
+            transform: translateY(-3px);
+        }
+
+       
+        .btn:nth-child(even) {
+            background: linear-gradient(135deg, #ffffff 70%, #e6f2ff 100%);
+            color: #0056b3;
+            border: 2px solid #ffffff;
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+        }
+        
+        .btn:nth-child(even):hover {
+            background: linear-gradient(135deg, #0056b3 0%, #001f4d 100%);
+            color: #ffffff;
+            border-color: #00a8ff;
+            box-shadow: 0 0 25px rgba(0, 168, 255, 0.5);
+            transform: translateY(-3px);
+        }
+
+        
+        @media (max-width: 768px) {
+            body {
+                overflow-y: auto;
+            }
+            .right-panel {
+                width: 100%;
+                height: auto;
+                min-height: 100vh;
+                background: rgba(5, 11, 20, 0.88);
+                border-left: none;
+            }
+            .title {
+                font-size: 2rem;
+                margin-top: 30px;
+            }
+            .button-container {
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <video class="video-background" autoplay muted loop playsinline>
+        <source src="persona3.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="overlay"></div>
+
+    <div class="right-panel">
+        <div class="title">Lê Hoàng Định Phi</div>
+
+        <div class="button-container">
+            <a href="https://bleadss.github.io/introduce_myself/" target="_blank" class="btn">Giới Thiệu</a>
+            <a href="https://bleadss.github.io/tvu_login_page/" target="_blank" class="btn">Trang Đăng Nhập TVU</a>
+            <a href="https://bleadss.github.io/sign_in/" target="_blank" class="btn">Trang Đăng Ký</a>
+            <a href="Https://cozy-starship-39bb0c.netlify.app/?zarsrc=411&utm_source=zalo&utm_medium=zalo&utm_campaign=zalo" target="_blank" class="btn">Danh Sách Nhạc</a>
+            <a href="Https://melodious-belekoy-6aa682.netlify.app/?zarsrc=31&utm_source=zalo&utm_medium=zalo&utm_campaign=zalo" target="_blank" class="btn">Thơ</a>
+            <a href="https://bleadss.github.io/tgdd/" target="_blank" class="btn">Thế Giới Di Động</a>
+        </div>
+    </div>
+
+</body>
+</html>
