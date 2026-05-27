@@ -101,6 +101,10 @@
             letter-spacing: 1px;
             border-radius: 6px; 
             transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            
+            /* Đảm bảo khi phóng to không bị các nút khác đè lên viền đổ bóng */
+            position: relative;
+            z-index: 1;
         }
 
         .btn:nth-child(odd) {
@@ -110,12 +114,14 @@
             box-shadow: 0 4px 15px rgba(0, 168, 255, 0.3);
         }
       
+        /* THAY ĐỔI Ở ĐÂY: Đổi translateY sang scale(1.08) và tăng z-index */
         .btn:nth-child(odd):hover {
             background: #ffffff;
             color: #0056b3;
             border-color: #ffffff; 
-            box-shadow: 0 0 25px rgba(255, 255, 255, 0.7);
-            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.5), 0 0 25px rgba(0, 168, 255, 0.6);
+            transform: scale(1.08);
+            z-index: 10;
         }
 
         .btn:nth-child(even) {
@@ -125,12 +131,14 @@
             box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
         }
         
+        /* THAY ĐỔI Ở ĐÂY: Đổi translateY sang scale(1.08) và tăng z-index */
         .btn:nth-child(even):hover {
             background: linear-gradient(135deg, #0056b3 0%, #001f4d 100%);
             color: #ffffff;
             border-color: #00a8ff;
-            box-shadow: 0 0 25px rgba(0, 168, 255, 0.5);
-            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 168, 255, 0.4), 0 0 25px rgba(255, 255, 255, 0.4);
+            transform: scale(1.08);
+            z-index: 10;
         }
 
         @media (max-width: 768px) {
